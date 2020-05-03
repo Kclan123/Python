@@ -1,3 +1,5 @@
+import math
+
 def add(x,y):
     z=x+y
     return z
@@ -9,11 +11,16 @@ def multiply(x,y):
 def subtract(x,y):
     z=x-y
     return z
-    
+
 def divide(x,y):
     z=x/y
     return z
 
+
+def square_root(x,y):
+    z=math.sqrt(x**2 + y**2)
+    return z
+    
 
 def calculator(x,y,op):
     if (op== "+"):
@@ -23,6 +30,8 @@ def calculator(x,y,op):
     if (op== "-"):
         return subtract(x,y)
     if (op=="/"):
-        return divide(x,y) 
+        return divide(x,y)
+    if  (op=="**"):
+        return square_root(x,y)
 
-print(calculator(6,8,'*'))
+print(calculator(5,10,'**'))
